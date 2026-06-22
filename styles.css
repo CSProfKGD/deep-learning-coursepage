@@ -199,7 +199,7 @@ a {
   z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 1.22fr) minmax(360px, 0.78fr);
-  align-items: end;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -250,6 +250,7 @@ h1 {
   align-items: center;
   max-width: 470px;
   justify-self: end;
+  transform: translateY(-1.5rem);
   padding: 0.95rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -591,11 +592,9 @@ h2 {
   pointer-events: none;
   transform: translate3d(0, 8px, -18px) rotateX(4deg);
   transition:
-    max-height 620ms cubic-bezier(0.2, 0.8, 0.2, 1),
-    padding 620ms cubic-bezier(0.2, 0.8, 0.2, 1),
-    border-color 620ms ease,
-    opacity 260ms ease,
-    transform 620ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    opacity 120ms ease,
+    transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 220ms ease;
 }
 
 .gan-dialogue p {
@@ -759,6 +758,7 @@ h2 {
   .instructor-panel {
     max-width: 560px;
     justify-self: start;
+    transform: none;
   }
 
   .lecture-grid {
@@ -828,6 +828,7 @@ h2 {
   .instructor-panel {
     grid-template-columns: 1fr;
     max-width: none;
+    transform: none;
   }
 
   .portrait {
