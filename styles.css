@@ -581,6 +581,7 @@ h2 {
   display: grid;
   width: auto;
   max-height: 0;
+  margin-top: 0;
   overflow: hidden;
   border: 1px solid transparent;
   border-radius: var(--radius);
@@ -594,7 +595,9 @@ h2 {
   pointer-events: none;
   transform: translate3d(0, 8px, -18px) rotateX(4deg);
   transition:
-    opacity 120ms ease,
+    max-height 620ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    margin-top 620ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    padding 620ms cubic-bezier(0.2, 0.8, 0.2, 1),
     transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1),
     border-color 220ms ease;
 }
@@ -618,6 +621,7 @@ h2 {
 .gan-card.is-hover-revealed .gan-dialogue,
 .gan-card.is-revealed .gan-dialogue {
   max-height: 12rem;
+  margin-top: 0;
   border-color: color-mix(in srgb, var(--accent) 18%, var(--line));
   padding: 0.85rem;
   opacity: 1;

@@ -131,7 +131,7 @@ function renderLectures() {
         if (event.target.closest("a, button")) return;
         article.classList.toggle("is-revealed");
       });
-      article.addEventListener("pointermove", (event) => {
+      article.addEventListener("pointerover", (event) => {
         if (event.pointerType === "touch") return;
         article.classList.toggle("is-hover-revealed", !event.target.closest("a, button"));
       });
