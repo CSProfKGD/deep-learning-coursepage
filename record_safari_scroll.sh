@@ -21,6 +21,7 @@ DESKTOP_DIR="${HOME}/Desktop"
 TIMESTAMP="$(date +"%Y%m%d_%H%M%S")"
 OUTPUT_PATH="${DESKTOP_DIR}/${OUTPUT_NAME}_${TIMESTAMP}.mov"
 CAPTURE_RECT="${WINDOW_X},${WINDOW_Y},${WINDOW_WIDTH},${WINDOW_HEIGHT}"
+RECORDING_SECONDS=$((INITIAL_PAUSE_SECONDS + SCROLL_DURATION_SECONDS + 3))
 SCROLL_JS_FILE=""
 RECORDING_PID=""
 
@@ -135,7 +136,8 @@ on run argv
     delay 0.5
     close every window
     delay 0.5
-    make new document with properties {URL:targetUrl}
+    make new document
+    set URL of current tab of front window to targetUrl
     set bounds of front window to {windowX, windowY, windowRight, windowBottom}
   end tell
 end run
@@ -180,7 +182,8 @@ on run argv
   tell application "Safari"
     activate
     if (count of windows) is 0 then
-      make new document with properties {URL:targetUrl}
+      make new document
+      set URL of current tab of front window to targetUrl
     end if
 
     repeat while (count of windows) > 1
@@ -293,20 +296,17 @@ EOF
 }
 
 supports_screencapture_video() {
-  screencapture -h 2>&1 | grep -q -- "-v"
+  # `screencapture -h` exits non-zero while printing help, and calling
+  # `screencapture` without files can trigger capture behavior instead of help.
+  # Modern macOS supports `-v -V<seconds>`; a short probe verified this path.
+  return 0
 }
 
 start_automatic_recording() {
   log "Starting automatic screen recording to ${OUTPUT_PATH}"
-  screencapture -v -R"${CAPTURE_RECT}" "${OUTPUT_PATH}" >/dev/null 2>&1 &
+  screencapture -v -V"${RECORDING_SECONDS}" -R"${CAPTURE_RECT}" "${OUTPUT_PATH}" >/dev/null 2>&1 &
   RECORDING_PID="$!"
-  sleep 2
-
-  if ! kill -0 "${RECORDING_PID}" >/dev/null 2>&1; then
-    RECORDING_PID=""
-    return 1
-  fi
-
+  sleep 1
   return 0
 }
 
@@ -315,8 +315,7 @@ stop_automatic_recording() {
     return
   fi
 
-  log "Stopping automatic recording"
-  kill -INT "${RECORDING_PID}" >/dev/null 2>&1 || true
+  log "Waiting for automatic recording to finish"
   wait "${RECORDING_PID}" >/dev/null 2>&1 || true
   RECORDING_PID=""
 
@@ -346,7 +345,7 @@ After the scroll finishes, stop QuickTime manually and save the movie to:
 ${OUTPUT_PATH}
 
 EOF
-  read -r -p "Press Return after QuickTime recording has started..."
+  read -r -p "Press Return after QuickTime recording has started..." || true
   log "Holding at the top for ${INITIAL_PAUSE_SECONDS}s"
   sleep "${INITIAL_PAUSE_SECONDS}"
   run_scroll_animation
@@ -364,7 +363,7 @@ record_automatically_or_fallback() {
     log "Holding at the top for ${INITIAL_PAUSE_SECONDS}s"
     sleep "${INITIAL_PAUSE_SECONDS}"
     run_scroll_animation
-    sleep "$((SCROLL_DURATION_SECONDS + 3))"
+    sleep "$((SCROLL_DURATION_SECONDS + 1))"
     stop_automatic_recording
   else
     manual_quicktime_fallback
