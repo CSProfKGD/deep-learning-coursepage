@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="A curated, visual, modern journey through deep learning, from neural networks to generative AI systems."
+    >
+    <title>A Visual and Technical Journey Into Deep Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      const storedTheme = localStorage.getItem("course-theme");
+      document.documentElement.dataset.theme = storedTheme || "dark";
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#journey">Skip to lectures</a>
+    <header class="site-header" aria-label="Primary navigation">
+      <nav class="nav-shell">
+        <a class="brand" href="https://www.yorku.ca" aria-label="York University homepage">
+          <img src="assets/YorkULogo_PRIMARY_Ver_REV.png" alt="York University">
+        </a>
+        <div class="nav-actions">
+          <a href="#journey">Journey</a>
+          <a href="#resources">Resources</a>
+          <button class="theme-toggle" type="button" aria-label="Switch to light theme">
+            <span class="toggle-icon" aria-hidden="true"></span>
+            <span class="toggle-text">Light</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="course-title">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">EECS 6322: Neural Networks and Deep Learning</p>
+            <h1 id="course-title">A Visual and Technical Journey Into Deep Learning</h1>
+            <p class="subtitle">From neural networks and transformers to diffusion models and modern AI systems.</p>
+          </div>
+          <aside class="instructor-panel" aria-label="Instructor">
+            <!-- TODO: Replace this instructor portrait if a newer approved image becomes available. -->
+            <img class="portrait" src="assets/KGD-profile.png" alt="Illustrated portrait of Kosta Derpanis">
+            <div>
+              <p class="panel-label">Your Tour Guide</p>
+              <h2>Kosta Derpanis</h2>
+              <p>Associate Professor<br>York University</p>
+              <div class="social-links" data-social-links></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="overview section-band" aria-labelledby="overview-title">
+        <div class="section-inner overview-grid">
+          <div>
+            <p class="eyebrow">COURSE OVERVIEW</p>
+            <h2 id="overview-title">Understand the ideas powering modern AI.</h2>
+          </div>
+          <div class="overview-copy">
+            <p>Deep learning powers modern AI systems, from image recognition and generative models to autonomous vehicles and large language models. Through visual intuition, mathematical foundations, and practical examples, you'll develop a deep understanding of neural networks and the ideas behind today's AI systems. By the end of the course, you'll be able to implement deep learning models, understand contemporary research, and continue learning independently.</p>
+            <div class="overview-prereqs">
+              <h3>Prerequisites</h3>
+              <p>Python • Calculus • Linear Algebra • Basic Machine Learning</p>
+              <p>Forgotten some of these topics? Don't worry. We'll review the essentials along the way.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="journey section-band" id="journey" aria-labelledby="journey-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">The Journey</p>
+              <h2 id="journey-title">A complete path through modern deep learning.</h2>
+            </div>
+          </div>
+          <div class="category-nav" data-category-nav aria-label="Lecture categories"></div>
+          <p class="lecture-note">Current videos contain slide animations only. Full narrated lectures are coming soon.</p>
+          <div class="lecture-grid" data-lecture-grid aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="resources" id="resources" aria-labelledby="resources-title">
+        <div class="section-inner resource-layout">
+          <div>
+            <p class="eyebrow">FURTHER STUDY</p>
+            <h2 id="resources-title">Textbooks and resources.</h2>
+            <p class="section-support">A curated set of books, references, and review materials to support the course.</p>
+          </div>
+          <div class="resource-columns">
+            <section aria-labelledby="books-title">
+              <h3 id="books-title">Recommended Textbooks</h3>
+              <div class="resource-list" data-textbook-list></div>
+            </section>
+            <section aria-labelledby="links-title">
+              <h3 id="links-title">Course Resources</h3>
+              <div class="resource-list" data-resource-list></div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- TODO: Future course customization can adjust copy, grouping, and theme tokens here. -->
+    <!-- TODO: Future lecture additions should be made in data/course.json only. -->
+
+    <script src="data/course-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

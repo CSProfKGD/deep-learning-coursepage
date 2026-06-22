@@ -1,0 +1,523 @@
+window.COURSE_DATA = {
+  "meta": {
+    "title": "A Visual and Technical Journey Into Deep Learning",
+    "subtitle": "From neural networks and transformers to diffusion models and modern AI systems.",
+    "sourceUrl": "https://www.eecs.yorku.ca/~kosta/Courses/EECS6322/",
+    "instructor": {
+      "name": "Kosta Derpanis",
+      "role": "Associate Professor, York University",
+      "homepageUrl": "http://www.scs.ryerson.ca/%7Ekosta/",
+      "twitterUrl": "https://x.com/home",
+      "linkedinUrl": "https://www.linkedin.com/in/kosta-derpanis-a07824122/"
+    }
+  },
+  "lectures": [
+    {
+      "category": "Foundations",
+      "lectureNumber": 1,
+      "sourceNumber": 0,
+      "catchyTitle": "Teaching Machines to See",
+      "originalLectureTitle": "Introduction to Computer Vision",
+      "description": "Begin with the visual world as data, and see why perception makes deep learning both powerful and difficult.",
+      "slidesUrl": "https://drive.google.com/file/d/1HXT74Vjde8gSTQDNg0a2GhcqxDhecjCJ/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1XuvJn_Rsqn3gbvH6Z8VUe5kjocG-JuCD/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Foundations",
+      "lectureNumber": 2,
+      "sourceNumber": 1,
+      "catchyTitle": "AI in the Real World",
+      "originalLectureTitle": "Ethics, Privacy and Security in Machine Learning",
+      "description": "Study the social stakes of learning systems before trusting models with people, institutions, and sensitive data.",
+      "slidesUrl": "https://drive.google.com/file/d/1NjM4o0q7r7Alde6TRa7OwigpqOYBuvHV/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1vyBvVY6HPSY6OQrDm1wYK5SBWWAErHT9/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Foundations",
+      "lectureNumber": 3,
+      "sourceNumber": 2,
+      "catchyTitle": "Everything You Need to Know About ML in One Lecture",
+      "originalLectureTitle": "Machine Learning Essentials",
+      "description": "Revisit the essential machine learning ideas that deep networks extend, automate, and sometimes challenge in practice.",
+      "slidesUrl": "https://drive.google.com/file/d/1JG714CtmeT6_zroP6SqQ4Jd1cGamzArL/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1vvHflB14bvuRJbU3tVOR_AFj_sBJHayX/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Neural Network Foundations",
+      "lectureNumber": 4,
+      "sourceNumber": 3,
+      "catchyTitle": "Meet the Neural Network",
+      "originalLectureTitle": "Multilayer Perceptron",
+      "description": "Connect simple layered computations to flexible function approximation, the core pattern behind modern neural networks.",
+      "slidesUrl": "https://drive.google.com/file/d/1Nkh1RhouguvTJZ_NruTdipzNBJaToRZh/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1Tfzk170RsZmrk2fg_VTkxP3kKtf1d-Rp/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Neural Network Foundations",
+      "lectureNumber": 5,
+      "sourceNumber": 4,
+      "catchyTitle": "Teaching Machines to See",
+      "originalLectureTitle": "Convolutional Network (ConvNet)",
+      "description": "Discover how locality, sharing, and hierarchy let networks recognize visual structure across natural images robustly.",
+      "slidesUrl": "https://drive.google.com/file/d/1SQoWZXa8E9a9WUEhWfUu2Vtr9fYIWAXC/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1U2-grlvic7tkF2jf8ieUcoORvrP1dKPE/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Neural Network Foundations",
+      "lectureNumber": 6,
+      "sourceNumber": 5,
+      "catchyTitle": "Learning from Mistakes",
+      "originalLectureTitle": "Backprop",
+      "description": "Follow errors backward through a network to understand how gradient signals assign credit and guide learning.",
+      "slidesUrl": "https://drive.google.com/file/d/1zLMjGObyNEB5FnpQaUmrPS_1ZFsWIUcs/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1SFVJcdM5TMw_19_iRBJWb7a200q0px90/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Neural Network Foundations",
+      "lectureNumber": 7,
+      "sourceNumber": 6,
+      "catchyTitle": "Finding the Way Down the Mountain",
+      "originalLectureTitle": "Optimization",
+      "description": "Learn how training navigates high-dimensional loss landscapes and why practical optimization is rarely straightforward in deep models.",
+      "slidesUrl": "https://drive.google.com/file/d/14yDe-0cysRTgeH5-fpMRV_ad9dEk9J0R/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1YubH-l2Kkn4Fa4cDFUURQk3Et5XhKLO1/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Neural Network Foundations",
+      "lectureNumber": 8,
+      "sourceNumber": 7,
+      "catchyTitle": "Building Your Toolbox",
+      "originalLectureTitle": "Introduction to PyTorch (version 1.0+)",
+      "description": "Translate network ideas into code using tensors, modules, autograd, and the workflow of modern PyTorch.",
+      "slidesUrl": "https://drive.google.com/file/d/1-JI0KtvwT2_b_JwN9AWqeiO6D6cVGxyu/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1k-SWSnFQX2HmLfK5YBu5cJr6HlYO82bG/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Neural Network Foundations",
+      "lectureNumber": 9,
+      "sourceNumber": 9,
+      "catchyTitle": "Teaching Networks to Learn",
+      "originalLectureTitle": "Training Networks",
+      "description": "See how data, losses, regularization, and evaluation come together to make learning reliable in neural systems.",
+      "slidesUrl": "https://drive.google.com/file/d/1R5C73LRlhr_Z1ZzMI297CpKfskjlU7zB/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1SqGVw9J2yDBxhv-zeN8iw6s4Jn3ZWUzz/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Neural Network Foundations",
+      "lectureNumber": 10,
+      "sourceNumber": 10,
+      "catchyTitle": "Starting Off on the Right Foot",
+      "originalLectureTitle": "Weight Initialization",
+      "description": "Understand why initial weights shape signal flow and can determine whether deep networks train at all.",
+      "slidesUrl": "https://drive.google.com/file/d/1qxXuDclqN_3aj52Wg77jiXVwf8erJreh/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1l7byFN4bxIDyn9E-61gK2wg1dIgjxPg0/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Neural Network Foundations",
+      "lectureNumber": 11,
+      "sourceNumber": 11,
+      "catchyTitle": "Standing on the Shoulders of Giants",
+      "originalLectureTitle": "Transfer Learning",
+      "description": "Reuse learned representations to solve new tasks faster, with less data and stronger starting assumptions.",
+      "slidesUrl": "https://drive.google.com/file/d/1kwN_DkT_iH8QJTBJdBc1RfZPAPejTe-k/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1JyBPWdEpO-R72E-1JXxgzRvW8fEQ3Hkp/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Neural Network Foundations",
+      "lectureNumber": 12,
+      "sourceNumber": 12,
+      "catchyTitle": "Passing Knowledge Forward",
+      "originalLectureTitle": "Teacher-Student Learning",
+      "description": "Explore how compact models can inherit behavior from larger teachers while trading capacity for efficiency.",
+      "slidesUrl": "https://drive.google.com/file/d/19dJwcLh8pWylcttT-qEp1j72JW0-g9YF/view?usp=sharing",
+      "videoUrl": "https://drive.google.com/file/d/1435V0LGxbQvapUoyqpj7pJPQZ04KFuHf/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Spatial Models",
+      "lectureNumber": 13,
+      "sourceNumber": 13,
+      "catchyTitle": "The Evolution of Seeing",
+      "originalLectureTitle": "Object Recognition Architectures",
+      "description": "Trace how recognition architectures evolved to balance depth, computation, optimization, and visual abstraction at scale.",
+      "slidesUrl": "https://drive.google.com/file/d/1H45QzDo9NGd_fkjC2r25YzGrM06ClGn5/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1sMlVYVBplZ_F1SYZIvWOAt_s-C_JyEhv/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Spatial Models",
+      "lectureNumber": 14,
+      "sourceNumber": 14,
+      "catchyTitle": "Finding Needles in Haystacks",
+      "originalLectureTitle": "Object Detection",
+      "description": "Move from recognizing images to locating objects, where models must reason about both category and position.",
+      "slidesUrl": "https://drive.google.com/file/d/1vxwY-SggfbOAmTTt6Q7igVyfJeMx8wzy/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1YGmnkGAYIZBAk2CM5Xtsewn4DaWQin0g/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Spatial Models",
+      "lectureNumber": 15,
+      "sourceNumber": 15,
+      "catchyTitle": "Learning Similarity",
+      "originalLectureTitle": "Metric Learning",
+      "description": "Learn representations where distance carries meaning, enabling retrieval, verification, and comparison across visual examples effectively.",
+      "slidesUrl": "https://drive.google.com/file/d/1DMpAMNu2yZtWFJEFh1fVtbaDn0VkBtS-/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1f8UwDB_TKgyggOSuuYK20Je5FvajPuwC/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Spatial Models",
+      "lectureNumber": 16,
+      "sourceNumber": 16,
+      "catchyTitle": "Painting Every Pixel",
+      "originalLectureTitle": "Pixel Labeling Tasks",
+      "description": "Shift prediction from whole images to dense maps, where every pixel contributes to structured understanding.",
+      "slidesUrl": "https://drive.google.com/file/d/1Ftug23OrNyeI4MBEuTiZlS6Cv0uCF2Ro/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1xXHf09UTbjUDwWRffpGxVUPmPuu5j2wE/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Spatial Models",
+      "lectureNumber": 17,
+      "sourceNumber": 17,
+      "catchyTitle": "Tracking Pixels Through Time",
+      "originalLectureTitle": "Application: Optical Flow",
+      "description": "Understand motion as correspondence between frames, linking perception to change, continuity, and temporal structure in video.",
+      "slidesUrl": "https://drive.google.com/file/d/1KdLhUKPEnaZC15poYM_FqPhcwTALJAEX/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1M_Nad3VLGPkxlbwLJ7lnUjRcVEM2FkYO/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Spatial Models",
+      "lectureNumber": 18,
+      "sourceNumber": 18,
+      "catchyTitle": "Seeing the Bigger Picture",
+      "originalLectureTitle": "Application: Segmentation Aware Filtering",
+      "description": "Use scene structure to guide filtering, preserving meaningful regions while respecting boundaries and context in images.",
+      "slidesUrl": "https://drive.google.com/file/d/1Fw1ZkoNLmtpxk9rDQLyFviUVOmDxEuiH/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1CLO95Si7EwvEsSszjtwCylKmL-G7gdvJ/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Visualization",
+      "lectureNumber": 19,
+      "sourceNumber": 19,
+      "catchyTitle": "Peering Inside the Black Box",
+      "originalLectureTitle": "Understanding ConvNets",
+      "description": "Investigate what convolutional networks learn, using visualizations that reveal features, layers, and model behavior directly.",
+      "slidesUrl": "https://drive.google.com/file/d/1KYuiCjd2M28Hxz36m414iG9T5Z5b7IRy/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1SYl1BiZxlnJXqcYaFdcM076yK9-geXJQ/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Visualization",
+      "lectureNumber": 20,
+      "sourceNumber": 20,
+      "catchyTitle": "Teaching Machines to Paint",
+      "originalLectureTitle": "Application: Texture Synthesis",
+      "description": "See how local patterns and learned statistics can generate convincing textures from visual examples alone.",
+      "slidesUrl": "https://drive.google.com/file/d/1ITXe1EexPDO_YftIW1wdzVnqKe6oC-mG/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1YO25EpjnVIQouuesCnFLAJTrXm1Ma47H/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Visualization",
+      "lectureNumber": 21,
+      "sourceNumber": 21,
+      "catchyTitle": "Art by Neural Networks",
+      "originalLectureTitle": "Application: Style Transfer",
+      "description": "Separate content from style to understand how neural representations can recombine visual information creatively across images.",
+      "slidesUrl": "https://drive.google.com/file/d/1D7bUuVoy2axzPnphNc-lM2w8jct4ylVd/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1NULhcv_-IXPRWh7AxLfGCV_6HD_F8kol/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Sequence Models",
+      "lectureNumber": 22,
+      "sourceNumber": 22,
+      "catchyTitle": "Giving Networks Memory",
+      "originalLectureTitle": "Recurrent Neural Network (RNN)",
+      "description": "Introduce recurrence as a way for neural networks to process sequences through evolving hidden state.",
+      "slidesUrl": "https://drive.google.com/file/d/1pDhNbGNJlFOoF1JNj1NuH5WtfzqTyh8T/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1FsEo1t1kXybalrnFbrXG6jJoSOCqwa9p/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Sequence Models",
+      "lectureNumber": 23,
+      "sourceNumber": 23,
+      "catchyTitle": "Remembering What Matters",
+      "originalLectureTitle": "Long Short-Term Memory (LSTM)",
+      "description": "Learn how gates help recurrent networks preserve important information and avoid short memory over sequences.",
+      "slidesUrl": "https://drive.google.com/file/d/13nmOeY5pNVnWlBhYOI34ds8QX6qiq3Az/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1texHVf9t3FTt02m97bvjraTRGXn4NCFS/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Sequence Models",
+      "lectureNumber": 24,
+      "sourceNumber": 24,
+      "catchyTitle": "Looking Forward and Backward",
+      "originalLectureTitle": "Bidirectional RNN",
+      "description": "Use past and future context together to build richer sequence representations when the full input is available.",
+      "slidesUrl": "https://drive.google.com/file/d/1wAbYXsYUEgQrP7jZVnBzIRPo_uNZigXo/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1J7DXwj8ZglsXTgFxqqyCesM5bjI7leOO/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Sequence Models",
+      "lectureNumber": 25,
+      "sourceNumber": 25,
+      "catchyTitle": "The Architecture That Changed AI",
+      "originalLectureTitle": "Transformers",
+      "description": "Understand attention as a flexible mechanism for relating tokens, images, and features without recurrence or convolution.",
+      "slidesUrl": "https://drive.google.com/file/d/1PUfMNeHtEoAC5M343rsLAYAgDKthwau4/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1tYNqohnBMdvCleMA9xrDo-LmidpyKxJ3/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Sequence Models",
+      "lectureNumber": 26,
+      "sourceNumber": 26,
+      "catchyTitle": "When Vision Met Language",
+      "originalLectureTitle": "Vision and Language",
+      "description": "Explore how models connect images with words, enabling captioning, grounding, and multimodal reasoning across tasks.",
+      "slidesUrl": "https://drive.google.com/file/d/1z-WCJ6UY2cMTrsf3_COhZxv_MMvR8iCW/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/13GrjxmVm-rSZvhtfq7vwCqOKIw-LwJl2/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Sequence Models",
+      "lectureNumber": 27,
+      "sourceNumber": 27,
+      "catchyTitle": "Understanding Actions in Motion",
+      "originalLectureTitle": "Action Recognition",
+      "description": "Reason about videos as structured motion, where appearance and time jointly define human actions over time.",
+      "slidesUrl": "https://drive.google.com/file/d/1CUBCSHiLf41DulH3MFrpQ4fa2t_Hhoq6/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1IYt_K1A843OOL4LEuAcAVKT6yA4r0Ftp/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Self-Supervised Learning",
+      "lectureNumber": 28,
+      "sourceNumber": 27,
+      "catchyTitle": "Look Ma No Labels",
+      "originalLectureTitle": "Learning Without Labels",
+      "description": "Learn how models create supervision from data itself, reducing dependence on expensive human annotations at scale.",
+      "slidesUrl": "https://drive.google.com/file/d/1FHPLyqMcaQQIvmND_WX9z-g9_t9zr5a4/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1dfbTg_Sn7LnLyz1sCIH-cPJKFxmSvQTq/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Geometric Deep Learning",
+      "lectureNumber": 29,
+      "sourceNumber": 28,
+      "catchyTitle": "Learning Beyond Grids",
+      "originalLectureTitle": "Graph Neural Networks",
+      "description": "Extend neural learning to graph-structured data where relationships matter as much as individual features themselves.",
+      "slidesUrl": "https://drive.google.com/file/d/1goaIUuHFpH1HD1pXtSuJFEoS7gf4zTCJ/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1VqBnm_adcb2DZ6e747-RPok0uir0zdhO/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Generative Models",
+      "lectureNumber": 30,
+      "sourceNumber": 29,
+      "catchyTitle": "What I Cannot Create, I Do Not Understand",
+      "originalLectureTitle": "Generative Models Introduction",
+      "description": "Frame generation as learning the structure of data well enough to create plausible new examples.",
+      "slidesUrl": "https://drive.google.com/file/d/1-2ge0ibkfKXDyVKz7lIl9HzIxmJw1_6I/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/14e9gZ5QF1xZd_goKwRr33CIs_dvJsA3r/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Generative Models",
+      "lectureNumber": 31,
+      "sourceNumber": 30,
+      "catchyTitle": "Predicting One Pixel at a Time",
+      "originalLectureTitle": "PixelNN (PixelRNN and PixelCNN)",
+      "description": "Model images autoregressively, seeing how simple conditional predictions can build complex visual distributions pixel by pixel.",
+      "slidesUrl": "https://drive.google.com/file/d/10tkbbftMheHgLXuRR8XdwNZVWjW6mMf1/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/15K1MmlA1iYOQEYvoxyiWzvhBb-J74vEc/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Generative Models",
+      "lectureNumber": 32,
+      "sourceNumber": 31,
+      "catchyTitle": "Compress, Reconstruct, Understand",
+      "originalLectureTitle": "Variational Autoencoder (VAE)",
+      "description": "Connect latent variables, reconstruction, and probability to learn compact representations that can generate new data.",
+      "slidesUrl": "https://drive.google.com/file/d/1mrcRCWSLOJ_0at-auK2iaWe8wlGLiqGp/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1fbTbI2xuuahITjedwZ5yg5TdP4lDL1w5/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Generative Models",
+      "lectureNumber": 33,
+      "sourceNumber": 32,
+      "catchyTitle": "Learning Reversible Worlds",
+      "originalLectureTitle": "Invertible Density Models - Normalizing Flows",
+      "description": "Use invertible transformations to map simple distributions into data while keeping likelihoods tractable and exact.",
+      "slidesUrl": "https://drive.google.com/file/d/1Ch9Gp5A-pPzGcFCz2WjO1YH6FsOHhNte/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1SCjsq613UMDyWCcFafmiBg8fGJkzAfbW/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Generative Models",
+      "lectureNumber": 34,
+      "sourceNumber": 33,
+      "catchyTitle": "When Competition Becomes Creativity",
+      "originalLectureTitle": "Generative Adversarial Network (GAN)",
+      "description": "Study generation as competition between creator and critic, revealing both power and training instability in practice.",
+      "slidesUrl": "https://drive.google.com/file/d/1pmmXEjh7uU2slPTvZr7ep5aN5JtdWFC0/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1SM5EjCOambzqliop8EcjVCN69TluROx4/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Generative Models",
+      "lectureNumber": 35,
+      "sourceNumber": 34,
+      "catchyTitle": "From Noise to Reality",
+      "originalLectureTitle": "Diffusion Models",
+      "description": "Understand generation as gradual denoising, where models learn to reverse corruption step by step over time.",
+      "slidesUrl": "https://drive.google.com/file/d/1PghoqEINXcjpcSFl4mqHVUHH9Yojf1l4/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1Lp_3jeL8GW8np82b_WYEJZg5ss0Gmpf_/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Generative Models",
+      "lectureNumber": 36,
+      "sourceNumber": 35,
+      "catchyTitle": "Learning the Flow of Data",
+      "originalLectureTitle": "Flow Matching",
+      "description": "Learn a continuous path from noise to data, connecting generative modeling with learned vector fields.",
+      "slidesUrl": "https://drive.google.com/file/d/1JT_FTwLnRup7SI7DhOz0wthj2ysTXU2Q/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/133Ogess3ZxoGppIhDxtGIFFAy3k14tAY/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "3D Vision",
+      "lectureNumber": 37,
+      "sourceNumber": 36,
+      "catchyTitle": "Building Worlds from Images",
+      "originalLectureTitle": "Gaussian Splatting",
+      "description": "Represent scenes with learned 3D primitives that render views efficiently from visual observations and camera motion.",
+      "slidesUrl": "https://drive.google.com/file/d/13aod_2M36zyDcTR15iqagIj2HhtLLwVt/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1JcYHb7bXUJQC5I4_nfzb9l3JVhmBG6Ud/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Adversarial Examples",
+      "lectureNumber": 38,
+      "sourceNumber": 37,
+      "catchyTitle": "When Machines Hallucinate",
+      "originalLectureTitle": "Adversarial Examples",
+      "description": "Examine small input changes that fool models, revealing fragility in learned decision boundaries and confidence.",
+      "slidesUrl": "https://drive.google.com/file/d/1Am2vwbUmemcQ8V5ZD7PzLGTa0ahBE0pd/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1ufP2tksMiFAA47oyw257TNIOJ3OJ5Mga/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Interpretability",
+      "lectureNumber": 39,
+      "sourceNumber": 38,
+      "catchyTitle": "What's Inside the Black Box?",
+      "originalLectureTitle": "What's inside the box?: Sparse Autoencoders",
+      "description": "Use sparse representations to inspect internal features and make complex neural systems more understandable to humans.",
+      "slidesUrl": "https://drive.google.com/file/d/1-jZk7K1ENMhqzn5-AAy4AaPI7fEFx_8D/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1lnV0f7CLxswUcx7TEpWRK12_YqESo07E/view?usp=share_link",
+      "status": "available"
+    },
+    {
+      "category": "Reinforcement Learning",
+      "lectureNumber": 40,
+      "sourceNumber": null,
+      "catchyTitle": "Trial and Error",
+      "originalLectureTitle": "Policy Gradients",
+      "description": "Introduce learning from actions and rewards, where models improve behavior through sampled experience and feedback.",
+      "slidesUrl": null,
+      "videoUrl": null,
+      "status": "coming-soon"
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Understanding Deep Learning",
+      "authors": "Simon Prince",
+      "freeUrl": "https://udlbook.github.io/udlbook/",
+      "publisherUrl": "https://mitpress.mit.edu/9780262048644/understanding-deep-learning/"
+    },
+    {
+      "title": "Foundations of Computer Vision",
+      "authors": "Antonio Torralba, Phillip Isola, William Freeman",
+      "freeUrl": "https://visionbook.mit.edu/",
+      "publisherUrl": "https://mitpress.mit.edu/9780262048972/foundations-of-computer-vision/"
+    },
+    {
+      "title": "The Little Book of Deep Learning",
+      "authors": "Francois Fleuret",
+      "freeUrl": "https://fleuret.org/francois/lbdl.html",
+      "publisherUrl": "https://fleuret.org/francois/lbdl.html"
+    },
+    {
+      "title": "Deep Learning",
+      "authors": "Ian Goodfellow, Yoshua Bengio, Aaron Courville",
+      "freeUrl": "http://www.deeplearningbook.org",
+      "publisherUrl": "https://mitpress.mit.edu/9780262035613/deep-learning/"
+    }
+  ],
+  "resources": [
+    {
+      "title": "The Matrix Calculus You Need for Deep Learning",
+      "url": "https://arxiv.org/abs/1802.01528"
+    },
+    {
+      "title": "Python NumPy tutorial",
+      "url": "https://cs231n.github.io/python-numpy-tutorial/"
+    },
+    {
+      "title": "Basic Linear algebra review",
+      "url": "http://www.ling.upenn.edu/courses/cogs501/LinearAlgebraReview.html"
+    },
+    {
+      "title": "Linear algebra review and reference",
+      "url": "http://cs229.stanford.edu/section/cs229-linalg.pdf"
+    },
+    {
+      "title": "The Matrix Cookbook",
+      "url": "https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf"
+    }
+  ],
+  "relatedCourses": [
+    {
+      "title": "York University EECS4422/5323: Introduction to Computer Vision",
+      "url": "https://www.eecs.yorku.ca/~kosta/Courses/EECS4422/"
+    },
+    {
+      "title": "University of Michigan EECS 498.008/598.008: Deep Learning for Computer Vision",
+      "url": "https://web.eecs.umich.edu/%7Ejustincj/teaching/eecs498/WI2022/"
+    },
+    {
+      "title": "Stanford CS231N: Convolutional Neural Networks for Visual Recognition",
+      "url": "http://cs231n.stanford.edu"
+    },
+    {
+      "title": "EPFL EE-559: Deep Learning",
+      "url": "https://fleuret.org/ee559/"
+    }
+  ]
+}
+;
