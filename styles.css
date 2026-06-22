@@ -376,6 +376,8 @@ h2 {
 }
 
 .overview-prereqs {
+  width: fit-content;
+  max-width: min(100%, 840px);
   margin-top: 0.75rem;
   border: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
   border-radius: var(--radius);
@@ -795,6 +797,11 @@ h2 {
   .journey,
   .resources {
     padding: 3rem 0;
+  }
+
+  .overview-prereqs {
+    width: 100%;
+    max-width: none;
   }
 
   .lecture-grid,
