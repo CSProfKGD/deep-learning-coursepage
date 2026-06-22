@@ -851,12 +851,18 @@ h2 {
 
   .instructor-panel {
     grid-template-columns: 1fr;
+    justify-items: center;
     max-width: none;
+    text-align: center;
     transform: none;
   }
 
   .portrait {
     width: 112px;
+  }
+
+  .social-links {
+    justify-content: center;
   }
 
   .category-nav {
@@ -871,12 +877,13 @@ h2 {
   }
 
   .card-actions {
-    align-items: stretch;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   .primary-cta,
   .link-chip,
   .status-chip {
-    width: 100%;
+    width: auto;
   }
 }
