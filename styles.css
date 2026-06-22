@@ -826,38 +826,17 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-}
-
-@media (max-width: 430px) {
-  .nav-shell {
-    min-height: 68px;
-  }
-
-  .brand img {
-    height: 48px;
-  }
-
-  .theme-toggle {
-    padding-inline: 0.68rem;
-  }
-
-  .toggle-text {
-    display: none;
-  }
-
-  .hero {
-    padding-top: 2.25rem;
-  }
-
   .instructor-panel {
     grid-template-columns: 1fr;
     justify-items: center;
     max-width: none;
+    justify-self: center;
     text-align: center;
     transform: none;
   }
 
   .portrait {
+    justify-self: center;
     width: 112px;
   }
 
@@ -885,5 +864,27 @@ h2 {
   .link-chip,
   .status-chip {
     width: auto;
+  }
+}
+
+@media (max-width: 430px) {
+  .nav-shell {
+    min-height: 68px;
+  }
+
+  .brand img {
+    height: 48px;
+  }
+
+  .theme-toggle {
+    padding-inline: 0.68rem;
+  }
+
+  .toggle-text {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 2.25rem;
   }
 }
