@@ -124,7 +124,7 @@ function renderLectures() {
         <p>"I made this image."</p>
         <p><strong>Discriminator:</strong></p>
         <p>"It's fake."</p>
-        <p><strong>Schmidhuber:</strong></p>
+        <p><strong>J. Schmidhuber:</strong></p>
         <p>"Please see my earlier work."</p>
       `;
 
@@ -167,7 +167,44 @@ function renderTextbooks(textbooks) {
   selectors.textbookList.replaceChildren(...items);
 }
 
-function renderResources(resources) {
+function resourceLink(resource, options = {}) {
+  const item = createElement("li");
+  const link = createElement("a", options.course ? "resource-link course-link" : "resource-link");
+  link.href = resource.url;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+
+  const text = createElement("span", "resource-link-text");
+  if (options.course) {
+    text.append(
+      createElement("span", "resource-author", resource.instructors),
+      createElement("span", "resource-university", resource.university)
+    );
+
+    const title = createElement("span", "resource-title");
+    if (resource.courseCode) {
+      title.append(
+        createElement("span", "resource-course-code", resource.courseCode),
+        document.createTextNode(" · ")
+      );
+    }
+    title.append(document.createTextNode(resource.courseTitle));
+    text.append(title);
+  } else if (resource.authors) {
+    text.append(
+      createElement("span", "resource-author", resource.authors),
+      createElement("span", "resource-title", resource.title)
+    );
+  } else {
+    text.append(createElement("span", "resource-title", resource.title));
+  }
+
+  link.append(text, createElement("span", "resource-arrow", "->"));
+  item.append(link);
+  return item;
+}
+
+function renderResources(resources, relatedCourses = []) {
   const categories = [
     {
       title: "Mathematics",
@@ -191,20 +228,22 @@ function renderResources(resources) {
     group.append(createElement("h4", null, category.title));
 
     const list = createElement("ul", "compact-resource-list");
-    const rows = category.resources.map((resource) => {
-      const item = createElement("li");
-      const link = createElement("a", null, resource.title);
-      link.href = resource.url;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      item.append(link);
-      return item;
-    });
+    const rows = category.resources.map(resourceLink);
 
     list.append(...rows);
     group.append(list);
     return group;
   });
+
+  if (relatedCourses.length) {
+    const group = createElement("div", "resource-group");
+    group.append(createElement("h4", null, "Related Courses"));
+
+    const list = createElement("ul", "compact-resource-list");
+    list.append(...relatedCourses.map((course) => resourceLink(course, { course: true })));
+    group.append(list);
+    items.push(group);
+  }
 
   selectors.resourceList.replaceChildren(...items);
 }
@@ -245,7 +284,7 @@ function renderCourse(course) {
   renderCategories();
   renderLectures();
   renderTextbooks(course.textbooks);
-  renderResources(course.resources);
+  renderResources(course.resources, course.relatedCourses);
 }
 
 setupThemeToggle();

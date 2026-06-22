@@ -6,8 +6,8 @@ window.COURSE_DATA = {
     "instructor": {
       "name": "Kosta Derpanis",
       "role": "Associate Professor, York University",
-      "homepageUrl": "http://www.scs.ryerson.ca/%7Ekosta/",
-      "twitterUrl": "https://x.com/home",
+      "homepageUrl": "https://csprofkgd.github.io",
+      "twitterUrl": "https://x.com/CSProfKGD",
       "linkedinUrl": "https://www.linkedin.com/in/kosta-derpanis-a07824122/"
     }
   },
@@ -94,7 +94,7 @@ window.COURSE_DATA = {
       "lectureNumber": 8,
       "sourceNumber": 7,
       "catchyTitle": "Building Your Toolbox",
-      "originalLectureTitle": "Introduction to PyTorch (version 1.0+)",
+      "originalLectureTitle": "Introduction to PyTorch",
       "description": "Translate network ideas into code using tensors, modules, autograd, and the workflow of modern PyTorch.",
       "slidesUrl": "https://drive.google.com/file/d/1-JI0KtvwT2_b_JwN9AWqeiO6D6cVGxyu/view?usp=share_link",
       "videoUrl": "https://drive.google.com/file/d/1k-SWSnFQX2HmLfK5YBu5cJr6HlYO82bG/view?usp=share_link",
@@ -448,9 +448,9 @@ window.COURSE_DATA = {
       "catchyTitle": "Trial and Error",
       "originalLectureTitle": "Policy Gradients",
       "description": "Introduce learning from actions and rewards, where models improve behavior through sampled experience and feedback.",
-      "slidesUrl": null,
-      "videoUrl": null,
-      "status": "coming-soon"
+      "slidesUrl": "https://drive.google.com/file/d/14gEVhm5-ml7HtTbt3wShckSNrE_GZL3x/view?usp=share_link",
+      "videoUrl": "https://drive.google.com/file/d/1mxcIElSEvKD3097raxH_BNMmco0rWyDj/view?usp=sharing",
+      "status": "available"
     }
   ],
   "textbooks": [
@@ -482,10 +482,12 @@ window.COURSE_DATA = {
   "resources": [
     {
       "title": "The Matrix Calculus You Need for Deep Learning",
+      "authors": "Terence Parr and Jeremy Howard",
       "url": "https://arxiv.org/abs/1802.01528"
     },
     {
       "title": "Python NumPy tutorial",
+      "authors": "Justin Johnson",
       "url": "https://cs231n.github.io/python-numpy-tutorial/"
     },
     {
@@ -494,28 +496,42 @@ window.COURSE_DATA = {
     },
     {
       "title": "Linear algebra review and reference",
+      "authors": "Zico Kolter",
       "url": "http://cs229.stanford.edu/section/cs229-linalg.pdf"
     },
     {
       "title": "The Matrix Cookbook",
+      "authors": "Kaare Brandt Petersen and Michael Syskind Pedersen",
       "url": "https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf"
     }
   ],
   "relatedCourses": [
     {
-      "title": "York University EECS4422/5323: Introduction to Computer Vision",
+      "instructors": "Kosta Derpanis",
+      "university": "York University",
+      "courseCode": "EECS4422/5323",
+      "courseTitle": "Introduction to Computer Vision",
       "url": "https://www.eecs.yorku.ca/~kosta/Courses/EECS4422/"
     },
     {
-      "title": "University of Michigan EECS 498.008/598.008: Deep Learning for Computer Vision",
+      "instructors": "Justin Johnson",
+      "university": "University of Michigan",
+      "courseCode": "EECS 498.008/598.008",
+      "courseTitle": "Deep Learning for Computer Vision",
       "url": "https://web.eecs.umich.edu/%7Ejustincj/teaching/eecs498/WI2022/"
     },
     {
-      "title": "Stanford CS231N: Convolutional Neural Networks for Visual Recognition",
+      "instructors": "Fei Fei Li, Justin Johnson, Serena Young",
+      "university": "Stanford University",
+      "courseCode": "CS231N",
+      "courseTitle": "Convolutional Neural Networks for Visual Recognition",
       "url": "http://cs231n.stanford.edu"
     },
     {
-      "title": "EPFL EE-559: Deep Learning",
+      "instructors": "Francois Fleuret",
+      "university": "University of Geneva",
+      "courseCode": "",
+      "courseTitle": "Deep Learning",
       "url": "https://fleuret.org/ee559/"
     }
   ]

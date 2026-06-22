@@ -14,7 +14,16 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css?v=20260622-mobile">
+    <link rel="stylesheet" href="styles.css?v=20260622-academic-resources">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM0VXJGZHP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+
+      gtag("config", "G-DM0VXJGZHP");
+    </script>
     <script>
       const storedTheme = localStorage.getItem("course-theme");
       document.documentElement.dataset.theme = storedTheme || "dark";
@@ -25,7 +34,7 @@
     <header class="site-header" aria-label="Primary navigation">
       <nav class="nav-shell">
         <a class="brand" href="https://www.yorku.ca" aria-label="York University homepage">
-          <img src="assets/YorkULogo_PRIMARY_Ver_REV.png" alt="York University">
+          <img src="assets/YorkULogo_DIGITAL_Ver_RGB_REV.svg" alt="York University">
         </a>
         <div class="nav-actions">
           <a href="#journey">Journey</a>
@@ -114,7 +123,7 @@
     <!-- TODO: Future course customization can adjust copy, grouping, and theme tokens here. -->
     <!-- TODO: Future lecture additions should be made in data/course.json only. -->
 
-    <script src="data/course-data.js"></script>
-    <script src="script.js"></script>
+    <script src="data/course-data.js?v=20260622-academic-resources"></script>
+    <script src="script.js?v=20260622-academic-resources"></script>
   </body>
 </html>
