@@ -116,6 +116,7 @@ function renderLectures() {
     article.append(top, bottom);
 
     if (isGanLecture) {
+      const revealSlot = createElement("div", "gan-reveal-slot");
       const dialogue = createElement("div", "gan-dialogue");
       dialogue.setAttribute("aria-hidden", "true");
       dialogue.innerHTML = `
@@ -139,7 +140,8 @@ function renderLectures() {
         article.classList.remove("is-hover-revealed");
       });
 
-      article.append(dialogue);
+      revealSlot.append(dialogue);
+      bottom.append(revealSlot);
     }
 
     return article;
