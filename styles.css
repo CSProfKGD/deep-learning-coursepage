@@ -159,6 +159,18 @@ a {
   object-fit: contain;
 }
 
+.brand-logo-light {
+  display: none;
+}
+
+:root[data-theme="light"] .brand-logo-dark {
+  display: none;
+}
+
+:root[data-theme="light"] .brand-logo-light {
+  display: block;
+}
+
 .nav-actions {
   gap: 1rem;
   color: var(--muted);
