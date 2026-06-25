@@ -159,15 +159,15 @@ a {
   object-fit: contain;
 }
 
-.brand-logo-light {
+.brand .brand-logo-light {
   display: none;
 }
 
-:root[data-theme="light"] .brand-logo-dark {
+:root[data-theme="light"] .brand .brand-logo-dark {
   display: none;
 }
 
-:root[data-theme="light"] .brand-logo-light {
+:root[data-theme="light"] .brand .brand-logo-light {
   display: block;
 }
 
