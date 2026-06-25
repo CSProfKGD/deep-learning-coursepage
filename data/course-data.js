@@ -7,6 +7,7 @@ window.COURSE_DATA = {
       "name": "Kosta Derpanis",
       "role": "Associate Professor, York University",
       "homepageUrl": "https://csprofkgd.github.io",
+      "emailUrl": "mailto:kosta@yorku.ca",
       "twitterUrl": "https://x.com/CSProfKGD",
       "linkedinUrl": "https://www.linkedin.com/in/kosta-derpanis-a07824122/"
     }

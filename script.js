@@ -39,6 +39,8 @@ function externalLink(label, href, className = "link-chip") {
 const socialIcons = {
   Homepage:
     '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/><path d="M9.5 20v-6h5v6"/></svg>',
+  Email:
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v11H4z"/><path d="m4.5 7 7.5 6 7.5-6"/></svg>',
   X:
     '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.9 10.5 21.3 2h-1.8l-6.4 7.4L8 2H2l7.8 11.3L2 22h1.8l6.8-7.8L16 22h6l-8.1-11.5Zm-2.4 2.7-.8-1.1L4.4 3.3h2.8l5 7 .8 1.1 6.6 9.3h-2.8l-5.3-7.5Z"/></svg>',
   LinkedIn:
@@ -47,6 +49,10 @@ const socialIcons = {
 
 function socialIconLink(label, href, iconKey) {
   const link = externalLink(label, href, "social-icon-link");
+  if (href && href.startsWith("mailto:")) {
+    link.removeAttribute("target");
+    link.removeAttribute("rel");
+  }
   link.setAttribute("aria-label", label);
   link.title = label;
   link.innerHTML = `${socialIcons[iconKey]}<span class="visually-hidden">${label}</span>`;
@@ -56,6 +62,7 @@ function socialIconLink(label, href, iconKey) {
 function renderSocialLinks(instructor) {
   selectors.socialLinks.replaceChildren(
     socialIconLink("Homepage", instructor.homepageUrl, "Homepage"),
+    socialIconLink("Email", instructor.emailUrl, "Email"),
     socialIconLink("X", instructor.twitterUrl, "X"),
     socialIconLink("LinkedIn", instructor.linkedinUrl, "LinkedIn")
   );

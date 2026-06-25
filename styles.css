@@ -315,7 +315,8 @@ h1 {
   fill: currentColor;
 }
 
-.social-icon-link[aria-label="Homepage"] svg {
+.social-icon-link[aria-label="Homepage"] svg,
+.social-icon-link[aria-label="Email"] svg {
   fill: none;
   stroke: currentColor;
   stroke-width: 2.2;
