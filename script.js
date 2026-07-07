@@ -117,7 +117,8 @@ function renderLectures() {
     actions.append(
       externalLink("Slides", lecture.slidesUrl),
       externalLink("Video", lecture.videoUrl),
-      ...(lecture.notesUrl ? [externalLink("Notes", lecture.notesUrl)] : [])
+      ...(lecture.notesUrl ? [externalLink("Notes", lecture.notesUrl)] : []),
+      ...((lecture.notes || []).map((note) => externalLink(note.label, note.url)))
     );
     bottom.append(actions);
 

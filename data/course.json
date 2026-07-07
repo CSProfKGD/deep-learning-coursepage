@@ -452,6 +452,16 @@
       "description": "Introduce learning from actions and rewards, where models improve behavior through sampled experience and feedback.",
       "slidesUrl": "https://drive.google.com/file/d/14gEVhm5-ml7HtTbt3wShckSNrE_GZL3x/view?usp=share_link",
       "videoUrl": "https://drive.google.com/file/d/1mxcIElSEvKD3097raxH_BNMmco0rWyDj/view?usp=sharing",
+      "notes": [
+        {
+          "label": "Notes #1",
+          "url": "https://drive.google.com/file/d/1G4qBqCnm9CznVwC42DLnst2QcGeQDngi/view?usp=share_link"
+        },
+        {
+          "label": "Notes #2",
+          "url": "https://drive.google.com/file/d/1muTE7vhglKxFZcBAaN8s2Hq8ycvgIM4k/view?usp=share_link"
+        }
+      ],
       "status": "available"
     }
   ],
