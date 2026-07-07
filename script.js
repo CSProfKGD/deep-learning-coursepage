@@ -116,7 +116,8 @@ function renderLectures() {
     const actions = createElement("div", "card-actions");
     actions.append(
       externalLink("Slides", lecture.slidesUrl),
-      externalLink("Video", lecture.videoUrl)
+      externalLink("Video", lecture.videoUrl),
+      ...(lecture.notesUrl ? [externalLink("Notes", lecture.notesUrl)] : [])
     );
     bottom.append(actions);
 

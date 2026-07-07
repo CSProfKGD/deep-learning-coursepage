@@ -286,6 +286,7 @@ window.COURSE_DATA = {
       "description": "Understand attention as a flexible mechanism for relating tokens, images, and features without recurrence or convolution.",
       "slidesUrl": "https://drive.google.com/file/d/1PUfMNeHtEoAC5M343rsLAYAgDKthwau4/view?usp=share_link",
       "videoUrl": "https://drive.google.com/file/d/1tYNqohnBMdvCleMA9xrDo-LmidpyKxJ3/view?usp=share_link",
+      "notesUrl": "https://drive.google.com/file/d/1oFO9UFFE3GB9FpvIYFenxQh1-BTGoLKm/view?usp=share_link",
       "status": "available"
     },
     {
