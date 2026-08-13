@@ -88,6 +88,7 @@
       "description": "Learn how training navigates high-dimensional loss landscapes and why practical optimization is rarely straightforward in deep models.",
       "slidesUrl": "https://drive.google.com/file/d/14yDe-0cysRTgeH5-fpMRV_ad9dEk9J0R/view?usp=share_link",
       "videoUrl": "https://drive.google.com/file/d/1YubH-l2Kkn4Fa4cDFUURQk3Et5XhKLO1/view?usp=share_link",
+      "demoUrl": "https://csprofkgd.github.io/gradient-descent-lab/",
       "status": "available"
     },
     {
