@@ -223,7 +223,8 @@ function renderResources(resources, relatedCourses = []) {
           "The Matrix Calculus You Need for Deep Learning",
           "Basic Linear algebra review",
           "Linear algebra review and reference",
-          "The Matrix Cookbook"
+          "The Matrix Cookbook",
+          "#KostasVisualizations"
         ].includes(resource.title)
       )
     },

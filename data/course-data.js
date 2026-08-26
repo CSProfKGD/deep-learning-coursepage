@@ -516,6 +516,11 @@ window.COURSE_DATA = {
       "title": "The Matrix Cookbook",
       "authors": "Kaare Brandt Petersen and Michael Syskind Pedersen",
       "url": "https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf"
+    },
+    {
+      "title": "#KostasVisualizations",
+      "authors": "Kosta Derpanis",
+      "url": "https://csprofkgd.github.io/kostas-visualizations/"
     }
   ],
   "relatedCourses": [
